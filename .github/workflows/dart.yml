@@ -19,7 +19,9 @@ jobs:
       image:  google/dart:latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '1.70'
     - name: Install dependencies
       run: flutter pub get
     - name: Static Analysis
