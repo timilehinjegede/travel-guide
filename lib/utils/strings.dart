@@ -12,6 +12,13 @@ class TravelGuideStrings {
   static const String twitter = 'assets/images/twitter.png';
   static const String web = 'assets/images/web.png';
 
+  // mobile nav bar images
+  static const String home = 'assets/images/home.png';
+  static const String discovery = 'assets/images/discovery.png';
+  static const String photos = 'assets/images/photos.png';
+  static const String contact = 'assets/images/contact.png';
+
+
   // texts
 
 }
