@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_guide/utils/utils.dart';
+import 'package:travel_guide/views/widgets/nav_bar/mobile_drawer.dart';
+import 'package:travel_guide/views/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -10,8 +12,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: TravelGuideColors.whiteColor,
         elevation: 0.0,
-        leading: Icon(
-          Icons.menu,
+        iconTheme: IconThemeData(
           color: TravelGuideColors.darkGreyColor,
         ),
         title: Text(
@@ -39,6 +40,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      drawer: ResponsiveUtil.isMobile(context) ? MobileDrawer() : null,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -108,6 +110,8 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            MobileBody(),
           ],
         ),
       ),
