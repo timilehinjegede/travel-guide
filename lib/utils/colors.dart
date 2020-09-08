@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TravelGuideColors {
-  static const colorPink = Color(0xffFA6980);
-  static const colorGrey = Color(0xffA6ADB4);
-  static const colorBlack = Color(0xff202124);
+  static const pinkColor = Color(0xffFA6980);
+  static const greyColor = Color(0xffA6ADB4);
+  static const blackColor = Color(0xff202124);
+  static const whiteColor = Color(0xffF6F8F9);
+  static const darkGreyColor = Color(0xff343638);
+  static const lighGreyColor = Color(0xffA6ADB4);
 }
