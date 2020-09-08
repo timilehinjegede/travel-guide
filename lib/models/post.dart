@@ -24,7 +24,7 @@ class Post {
       imgSrc: TravelGuideStrings.avatar1,
       posterName: 'Jonathan Walker',
       postBody:
-          'In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan…',
+          'In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsa consequat, nunc a preti consequat, nunc a preti rhoncus luctus massa vitae lobortis. Duis consequat, nunc a preti consequat, nunc a preti consequat, nunc a preti',
       hasAttachments: false,
       timePosted: '2m',
     ),
@@ -32,7 +32,7 @@ class Post {
       imgSrc: TravelGuideStrings.avatar2,
       posterName: 'Brenda Mercer',
       postBody:
-          'Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretim…',
+          'Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a preti consequat, nunc a preti consequat, nunc a preti',
       hasAttachments: true,
       timePosted: '1h',
       attachmentSrc: TravelGuideStrings.infoImage,

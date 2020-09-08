@@ -14,19 +14,30 @@ class MobileBody extends StatelessWidget {
         vertical: 20.0,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Quisque viverra interdum velit?'),
           Text(
-            'Culpa qui officia deserunt mollit anim id esto polujimi laborum. Sed ut perspiciatis unde omnis iste eropluk onatuspop error sit voluptartem accusantium wetrop doloremque laudantium, totam rem aperiam, eaquep ipsa quaeer ab illo inventore veritatisy et quasi weth ropeior architecto beatae vitae dicta sunt explicapbo. Nemo popul eniem ipsam yui voluptatem quialoperyi voluptas sit aspernatur aute odit aut fugit, sed quiawi consequuntur joki erty magni dolores eosep quiklopii ratione wertyuil voluptatem sequi nesciunt. Nequeop porro polu quisquam est, quepi dolorem ipsum quiat lopi dolor srit amet, consectetur adipisci velit, topitop seid quia non numquam eiuris modij tempora poluko incidunt ut labore et dolore magnam aliquam mokeru quaerat iope voluptatem. Lorem ipsum dolor sit amet, consectetur holukoro on adipisifwcing elit, sed do eiusmod tempor incididunte utopi labore et dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation eropileri ullamco laboris nisi ut aliquip ex ea commodo wopun consequat. Duis aute irure dolor in reprehenderit inie tufpoy voluptate velit esse cillum dolore eu fugiat holi nulla parieratur. Excepteur sint occaecat ropukuli uki cupidatat.',
+            TravelGuideStrings.bodyHeading,
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          YBox(10),
+          Text(
+            TravelGuideStrings.bodyContent,
+            style: TextStyle(
+              fontSize: 14,
+              color: TravelGuideColors.lighGreyColor,
+            ),
           ),
 
           Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 10.0,
-              vertical: 15.0,
+              vertical: 30.0,
             ),
             child: Divider(
-              color: TravelGuideColors.darkGreyColor,
+              color: TravelGuideColors.lighGreyColor,
               height: 2,
             ),
           ),
@@ -34,6 +45,9 @@ class MobileBody extends StatelessWidget {
           BuildPost(
             post: Post.postLists[0],
           ),
+
+          YBox(20),
+          
           BuildPost(
             post: Post.postLists[1],
           ),
@@ -55,26 +69,47 @@ class BuildPost extends StatelessWidget {
       children: [
         Row(
           children: [
-            Image(
-              image: AssetImage(
+            CircleAvatar(
+              radius: 17,
+              backgroundImage: AssetImage(
                 post.imgSrc,
               ),
             ),
+            XBox(15),
             Text(
               post.posterName,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
+        YBox(15),
         Text(
           post.postBody,
+          style: TextStyle(
+            fontSize: 14,
+            height: 1.3,
+          ),
+          maxLines: 3,
+          overflow: TextOverflow.ellipsis,
         ),
+        YBox(8),
         Row(
           children: [
             Icon(
               Icons.access_time,
+              size: 16,
+              color: TravelGuideColors.lighGreyColor,
             ),
+            XBox(3),
             Text(
               post.timePosted,
+              style: TextStyle(
+                fontSize: 12,
+                color: TravelGuideColors.lighGreyColor,
+              ),
             ),
           ],
         ),
@@ -87,6 +122,10 @@ class BuildPost extends StatelessWidget {
                     image: AssetImage(
                       post.attachmentSrc,
                     ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(
+                    10.0,
                   ),
                 ),
                 child: Center(
@@ -102,6 +141,8 @@ class BuildPost extends StatelessWidget {
                     ),
                     child: Icon(
                       Icons.play_arrow,
+                      color: TravelGuideColors.whiteColor,
+                      size: 20,
                     ),
                   ),
                 ),
