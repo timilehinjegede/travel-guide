@@ -17,8 +17,8 @@ class HomeScreen extends StatelessWidget {
           children: [
             ResponsiveUtil(
               mobileWidget: MobileIntroHeader(),
-              tabletWidget: SizedBox(),
-              desktopWidget: SizedBox(),
+              tabletWidget: DesktopIntroHeader(),
+              desktopWidget: DesktopIntroHeader(),
             ),
             ResponsiveUtil(
               mobileWidget: MobileBody(),
