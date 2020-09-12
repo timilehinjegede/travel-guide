@@ -10,7 +10,7 @@ class DesktopIntroHeader extends StatelessWidget {
       height: 400,
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-        horizontal: 30.0,
+        horizontal: 35.0,
         vertical: 20.0,
       ),
       decoration: BoxDecoration(

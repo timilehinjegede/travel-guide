@@ -22,9 +22,10 @@ class HomeScreen extends StatelessWidget {
             ),
             ResponsiveUtil(
               mobileWidget: MobileBody(),
-              tabletWidget: SizedBox(),
-              desktopWidget: SizedBox(),
+              tabletWidget: TabletBody(),
+              desktopWidget: DesktopBody(),
             ),
+            ResponsiveUtil.isTablet(context) ? TabletFooter() : DesktopFooter(),
           ],
         ),
       ),

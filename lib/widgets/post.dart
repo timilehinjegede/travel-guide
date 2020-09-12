@@ -5,11 +5,12 @@ import 'package:travel_guide/utils/utils.dart';
 class PostWidget extends StatelessWidget {
   final Post post;
 
-  const PostWidget({Key key, this.post}) : super(key: key);
+  const PostWidget({this.post,Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
@@ -60,7 +61,9 @@ class PostWidget extends StatelessWidget {
         YBox(20),
         post.hasAttachments
             ? Container(
-                height: 180,
+                height: ResponsiveUtil.isMobile(context)
+                    ? 180
+                    : ResponsiveUtil.isTablet(context) ? 350 : 600,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(

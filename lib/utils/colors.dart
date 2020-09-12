@@ -7,4 +7,6 @@ class TravelGuideColors {
   static const whiteColor = Color(0xffF6F8F9);
   static const darkGreyColor = Color(0xff343638);
   static const lighGreyColor = Color(0xffA6ADB4);
+  static const blueColor = Color(0xffA6ADB4);
+  static const lightBlueColor = Color(0xffCBD0D3);
 }
