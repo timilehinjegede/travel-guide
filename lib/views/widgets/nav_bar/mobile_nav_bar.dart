@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:travel_guide/utils/utils.dart';
 
-class MobileNavBar extends StatelessWidget {
+class MobileNavBar extends StatelessWidget implements PreferredSizeWidget {
   const MobileNavBar({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: TravelGuideColors.whiteColor,
       elevation: 0.0,
-      leading: Icon(
-        Icons.menu,
+      iconTheme: IconThemeData(
         color: TravelGuideColors.darkGreyColor,
       ),
       title: Text(
         'LOGO',
         style: TextStyle(
-          fontSize: 13,
+          fontSize: 16,
           fontWeight: FontWeight.bold,
           color: TravelGuideColors.lighGreyColor,
         ),
@@ -38,4 +37,7 @@ class MobileNavBar extends StatelessWidget {
       ],
     );
   }
+
+  @override
+  Size get preferredSize => Size.fromHeight(56);
 }

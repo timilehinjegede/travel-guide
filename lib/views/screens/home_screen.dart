@@ -9,37 +9,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: TravelGuideColors.whiteColor,
-        elevation: 0.0,
-        iconTheme: IconThemeData(
-          color: TravelGuideColors.darkGreyColor,
-        ),
-        title: Text(
-          'LOGO',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: TravelGuideColors.lighGreyColor,
-          ),
-        ),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(
-              right: 10.0,
-            ),
-            child: Image(
-              height: 25,
-              width: 25,
-              image: AssetImage(
-                TravelGuideStrings.avatar,
-              ),
-              fit: BoxFit.contain,
-            ),
-          ),
-        ],
-      ),
+      appBar:
+          ResponsiveUtil.isMobile(context) ? MobileNavBar() : DesktopNavBar(),
       drawer: ResponsiveUtil.isMobile(context) ? MobileDrawer() : null,
       body: SingleChildScrollView(
         child: Column(
