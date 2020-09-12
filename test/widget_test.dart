@@ -7,9 +7,6 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:travel_guide/main.dart';
-import 'package:travel_guide/views/screens/home_screen.dart';
-
 void main() {
   testWidgets('HomeScreen seen test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
